@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* ///////// Colour Section /////////  */
+
+  /* Oranges */
+  --orange-100: #d87d4a;
+  --orange-200: #fbaf85;
+
+  /* Whites */
+  --white-100: #ffffff;
+  --white-200: #fafafa;
+  --white-300: #f1f1f1;
+
+  /* Blacks */
+  --black-100: #000000;
+  --black-200: #1a1a1a;
+
+  /* ///////// Typography Section /////////  */
+
+  /* Headings */
+  --h1-size: 56px;
+  --h2-size: 40px;
+  --h3-size: 32px;
+  --h4-size: 28px;
+  --h5-size: 24px;
+  --h6-size: 18px;
+  --overline-size: 14px;
+  --subTitle-size: 13px;
+
+  /* Weights */
+  --weight-bold: 700;
+  --weight-regular: 400;
+
+  /* Line Heights */
+  --lh-h1: 58px;
+  --lh-h2: 44px;
+  --lh-h3: 36px;
+  --lh-h4: 25px;
+  --lh-default: 100%;
+
+  /* Letter Spacing */
+  --ls-h1: 2px;
+  --ls-h2: 1.43px;
+  --ls-h3: 1.14px;
+  --ls-h4: 1.71px;
+  --ls-h5: 1.29px;
+  --ls-overline: 10px;
+  --ls-subtitle: 0.93px;
+}
+
+@layer components {
+  /* ///////// Typography Components /////////  */
+
+  .headerOne {
+    @apply text-[var(--h1-size)] font-[var(--weight-bold)] leading-[var(--lh-h1)] tracking-[var(--ls-h1)];
+  }
+  .headerTwo {
+    @apply text-[var(--h2-size)] font-[var(--weight-bold)] leading-[var(--lh-h2)] tracking-[var(--ls-h2)];
+  }
+  .headerThree {
+    @apply text-[var(--h3-size)] font-[var(--weight-bold)] leading-[var(--lh-h3)] tracking-[var(--ls-h3)];
+  }
+  .headerFour {
+    @apply text-[var(--h4-size)] font-[var(--weight-bold)] leading-[var(--lh-h4)] tracking-[var(--ls-h4)];
+  }
+  .headerFive {
+    @apply text-[var(--h5-size)] font-[var(--weight-bold)] leading-[var(--lh-default)] tracking-[var(--ls-h5)];
+  }
+  .headerSix {
+    @apply text-[var(--h6-size)] font-[var(--weight-bold)] leading-[var(--lh-default)] tracking-[var(--ls-h5)];
+  }
+  .overline {
+    @apply text-[var(--overline-size)] font-[var(--weight-regular)] leading-[var(--lh-default)] tracking-[var(--ls-overline)];
+  }
+  .subTitle {
+    @apply text-[var(--subTitle-size)] font-[var(--weight-bold)] leading-[var(--lh-h4)] tracking-[var(--ls-subtitle)];
+  }
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
