@@ -16,7 +16,7 @@ export default function Navigationbar() {
   ];
 
   return (
-    <div className="w-full max-w-[70rem] mx-auto flex items-center justify-between text-[var(--white-100)] py-8 px-4 md:px-0 border-b-[0.5px] border-[var(--white-300)]">
+    <div className="w-full max-w-[70rem] mx-auto flex items-center justify-between text-white-100 py-8 px-4 md:px-0 border-b-[0.5px] border-white-300">
       <div className="md:w-fit w-full flex md:gap-8 justify-between md:justify-start">
         <TiThMenu className="w-6 h-6 cursor-pointer lg:hidden" />
         <img src="./HomeImages/AudiophileLogo.png" alt="Logo" />
@@ -28,9 +28,7 @@ export default function Navigationbar() {
             key={href}
             href={href}
             className={`cursor-pointer ${
-              pathname === href
-                ? "text-[var(--orange-100)]"
-                : "hover:text-[var(--white-300)]"
+              pathname === href ? "text-orange-100" : "hover:text-white-300"
             }`}
           >
             {label}

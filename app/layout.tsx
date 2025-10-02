@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div>
-          <div className="min-w-full bg-[var(--black-200)] flex justify-center">
+          <div className="min-w-full h-full bg-black-200 flex justify-center">
             <div className="w-full md:px-8 lg:min-w-[70rem] md:min-w-[689px]">
               <Navigationbar />
             </div>

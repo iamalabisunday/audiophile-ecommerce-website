@@ -1,81 +1,104 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import "tailwindcss";
 
-:root {
+@theme {
   /* ///////// Colour Section /////////  */
 
   /* Oranges */
-  --orange-100: #d87d4a;
-  --orange-200: #fbaf85;
+  --color-orange-100: #d87d4a;
+  --color-orange-200: #fbaf85;
 
   /* Whites */
-  --white-100: #ffffff;
-  --white-200: #fafafa;
-  --white-300: #f1f1f1;
+  --color-white-100: #ffffff;
+  --color-white-200: #fafafa;
+  --color-white-300: #f1f1f1;
 
   /* Blacks */
-  --black-100: #000000;
-  --black-200: #1a1a1a;
+  --color-black-100: #000000;
+  --color-black-200: #1a1a1a;
 
   /* ///////// Typography Section /////////  */
 
   /* Headings */
-  --h1-size: 56px;
-  --h2-size: 40px;
-  --h3-size: 32px;
-  --h4-size: 28px;
-  --h5-size: 24px;
-  --h6-size: 18px;
-  --overline-size: 14px;
-  --subTitle-size: 13px;
+  --text-h1-size: 56px;
+  --text-h2-size: 40px;
+  --text-h3-size: 32px;
+  --text-h4-size: 28px;
+  --text-h5-size: 24px;
+  --text-h6-size: 18px;
+  --text-overline-size: 14px;
+  --text-subTitle-size: 13px;
 
   /* Weights */
-  --weight-bold: 700;
-  --weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
 
   /* Line Heights */
-  --lh-h1: 58px;
-  --lh-h2: 44px;
-  --lh-h3: 36px;
-  --lh-h4: 25px;
-  --lh-default: 100%;
+  --leading-h1: 58px;
+  --leading-h2: 44px;
+  --leading-h3: 36px;
+  --leading-h4: 25px;
+  --leading-default: 100%;
 
   /* Letter Spacing */
-  --ls-h1: 2px;
-  --ls-h2: 1.43px;
-  --ls-h3: 1.14px;
-  --ls-h4: 1.71px;
-  --ls-h5: 1.29px;
-  --ls-overline: 10px;
-  --ls-subtitle: 0.93px;
+  --tracking-h1: 2px;
+  --tracking-h2: 1.43px;
+  --tracking-h3: 1.14px;
+  --tracking-h4: 1.71px;
+  --tracking-h5: 1.29px;
+  --tracking-overline: 10px;
+  --tracking-subtitle: 0.93px;
 }
 
 @layer components {
-  /* ///////// Typography Components /////////  */
-
   .headerOne {
-    @apply text-[var(--h1-size)] font-[var(--weight-bold)] leading-[var(--lh-h1)] tracking-[var(--ls-h1)];
+    font-size: var(--text-h1-size);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--leading-h1);
+    letter-spacing: var(--tracking-h1);
   }
   .headerTwo {
-    @apply text-[var(--h2-size)] font-[var(--weight-bold)] leading-[var(--lh-h2)] tracking-[var(--ls-h2)];
+    font-size: var(--text-h2-size);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--leading-h2);
+    letter-spacing: var(--tracking-h2);
   }
   .headerThree {
-    @apply text-[var(--h3-size)] font-[var(--weight-bold)] leading-[var(--lh-h3)] tracking-[var(--ls-h3)];
+    font-size: var(--text-h3-size);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--leading-h3);
+    letter-spacing: var(--tracking-h3);
   }
   .headerFour {
-    @apply text-[var(--h4-size)] font-[var(--weight-bold)] leading-[var(--lh-h4)] tracking-[var(--ls-h4)];
+    font-size: var(--text-h4-size);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--leading-h4);
+    letter-spacing: var(--tracking-h4);
   }
   .headerFive {
-    @apply text-[var(--h5-size)] font-[var(--weight-bold)] leading-[var(--lh-default)] tracking-[var(--ls-h5)];
+    font-size: var(--text-h5-size);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--leading-default);
+    letter-spacing: var(--tracking-h5);
   }
   .headerSix {
-    @apply text-[var(--h6-size)] font-[var(--weight-bold)] leading-[var(--lh-default)] tracking-[var(--ls-h5)];
+    font-size: var(--text-h6-size);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--leading-default);
+    letter-spacing: var(--tracking-h5);
   }
   .overline {
-    @apply text-[var(--overline-size)] font-[var(--weight-regular)] leading-[var(--lh-default)] tracking-[var(--ls-overline)];
+    font-size: var(--text-overline-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--leading-default);
+    letter-spacing: var(--tracking-overline);
+    text-transform: uppercase;
   }
   .subTitle {
-    @apply text-[var(--subTitle-size)] font-[var(--weight-bold)] leading-[var(--lh-h4)] tracking-[var(--ls-subtitle)];
+    font-size: var(--text-subTitle-size);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--leading-h4);
+    letter-spacing: var(--tracking-subtitle);
   }
 }
 
