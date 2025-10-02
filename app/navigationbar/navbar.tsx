@@ -1,9 +1,9 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { TiThMenu } from "react-icons/ti";
+import { usePathname } from "next/navigation";
 
 export default function Navigationbar() {
   const pathname = usePathname();
