@@ -15,7 +15,7 @@
 
   /* Blacks */
   --color-black-100: #000000;
-  --color-black-200: #1a1a1a;
+  --color-black-200: #131313;
 
   /* ///////// Typography Section /////////  */
 
@@ -26,12 +26,14 @@
   --text-h4-size: 28px;
   --text-h5-size: 24px;
   --text-h6-size: 18px;
+  --text-h7-size: 16px
   --text-overline-size: 14px;
   --text-subTitle-size: 13px;
 
   /* Weights */
   --font-weight-bold: 700;
   --font-weight-regular: 400;
+  --font-weight-semiregular: 500;
 
   /* Line Heights */
   --leading-h1: 58px;
@@ -87,12 +89,18 @@
     line-height: var(--leading-default);
     letter-spacing: var(--tracking-h5);
   }
-  .overline {
+
+  .bodytext {
+    font-size: var(--text-h7-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--leading-h4);
+  }
+
+  .subheader {
     font-size: var(--text-overline-size);
     font-weight: var(--font-weight-regular);
     line-height: var(--leading-default);
     letter-spacing: var(--tracking-overline);
-    text-transform: uppercase;
   }
   .subTitle {
     font-size: var(--text-subTitle-size);
