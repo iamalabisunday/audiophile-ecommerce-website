@@ -1,8 +1,20 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { TiThMenu } from "react-icons/ti";
 
 export default function Navigationbar() {
+  const pathname = usePathname();
+
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/headphones", label: "Headphones" },
+    { href: "/speakers", label: "Speakers" },
+    { href: "/earphones", label: "Earphones" },
+  ];
+
   return (
     <div className="w-full max-w-[70rem] mx-auto flex items-center justify-between text-[var(--white-100)] py-8 px-4 md:px-0 border-b-[0.5px] border-[var(--white-300)]">
       <div className="md:w-fit w-full flex md:gap-8 justify-between md:justify-start">
@@ -11,10 +23,19 @@ export default function Navigationbar() {
         <div className="md:hidden flex"></div>
       </div>
       <div className="subTitle w-fit uppercase lg:flex gap-6 cursor-pointer hidden">
-        <Link href="/">Home</Link>
-        <Link href="#">Headphones</Link>
-        <Link href="#">Speakers</Link>
-        <Link href="#">Earphones</Link>
+        {links.map(({ href, label }) => (
+          <Link
+            key={href}
+            href={href}
+            className={`cursor-pointer ${
+              pathname === href
+                ? "text-[var(--orange-100)]"
+                : "hover:text-[var(--white-300)]"
+            }`}
+          >
+            {label}
+          </Link>
+        ))}
       </div>
       <MdOutlineShoppingCart className="w-6 h-6 cursor-pointer" />
     </div>
