@@ -1,57 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import "tailwindcss";
 
-@theme {
-  /* ///////// Colour Section /////////  */
+@layer base {
+  @theme {
+    /* Colour Section   */
 
-  /* Oranges */
-  --color-orange-100: #d87d4a;
-  --color-orange-200: #fbaf85;
+    /* Oranges */
+    --color-orange-100: #d87d4a;
+    --color-orange-200: #fbaf85;
 
-  /* Whites */
-  --color-white-100: #ffffff;
-  --color-white-200: #fafafa;
-  --color-white-300: #f1f1f1;
+    /* Whites */
+    --color-white-100: #ffffff;
+    --color-white-200: #fafafa;
+    --color-white-300: #f1f1f1;
 
-  /* Blacks */
-  --color-black-100: #000000;
-  --color-black-200: #131313;
+    /* Blacks */
+    --color-black-100: #000000;
+    --color-black-200: #131313;
 
-  /* ///////// Typography Section /////////  */
+    /* Typography Section  */
 
-  /* Headings */
-  --text-h1-size: 56px;
-  --text-h2-size: 40px;
-  --text-h3-size: 32px;
-  --text-h4-size: 28px;
-  --text-h5-size: 24px;
-  --text-h6-size: 18px;
-  --text-h7-size: 16px
-  --text-overline-size: 14px;
-  --text-subTitle-size: 13px;
+    /* Headings */
+    --text-h1-size: 56px;
+    --text-h2-size: 40px;
+    --text-h3-size: 32px;
+    --text-h4-size: 28px;
+    --text-h5-size: 24px;
+    --text-h6-size: 18px;
+    --text-h7-size: 16px;
+    --text-overline-size: 14px;
+    --text-subTitle-size: 13px;
 
-  /* Weights */
-  --font-weight-bold: 700;
-  --font-weight-regular: 400;
-  --font-weight-semiregular: 500;
+    /* Weights */
+    --font-weight-bold: 700;
+    --font-weight-regular: 400;
+    --font-weight-semiregular: 500;
 
-  /* Line Heights */
-  --leading-h1: 58px;
-  --leading-h2: 44px;
-  --leading-h3: 36px;
-  --leading-h4: 25px;
-  --leading-default: 100%;
+    /* Line Heights */
+    --leading-h1: 58px;
+    --leading-h2: 44px;
+    --leading-h3: 36px;
+    --leading-h4: 25px;
+    --leading-default: 100%;
 
-  /* Letter Spacing */
-  --tracking-h1: 2px;
-  --tracking-h2: 1.43px;
-  --tracking-h3: 1.14px;
-  --tracking-h4: 1.71px;
-  --tracking-h5: 1.29px;
-  --tracking-overline: 10px;
-  --tracking-subtitle: 0.93px;
+    /* Letter Spacing */
+    --tracking-h1: 2px;
+    --tracking-h2: 1.43px;
+    --tracking-h3: 1.14px;
+    --tracking-h4: 1.71px;
+    --tracking-h5: 1.29px;
+    --tracking-overline: 10px;
+    --tracking-subtitle: 0.93px;
+  }
 }
 
+/* 📚 Custom typography classes */
 @layer components {
   .headerOne {
     font-size: var(--text-h1-size);
@@ -59,30 +62,35 @@
     line-height: var(--leading-h1);
     letter-spacing: var(--tracking-h1);
   }
+
   .headerTwo {
     font-size: var(--text-h2-size);
     font-weight: var(--font-weight-bold);
     line-height: var(--leading-h2);
     letter-spacing: var(--tracking-h2);
   }
+
   .headerThree {
     font-size: var(--text-h3-size);
     font-weight: var(--font-weight-bold);
     line-height: var(--leading-h3);
     letter-spacing: var(--tracking-h3);
   }
+
   .headerFour {
     font-size: var(--text-h4-size);
     font-weight: var(--font-weight-bold);
     line-height: var(--leading-h4);
     letter-spacing: var(--tracking-h4);
   }
+
   .headerFive {
     font-size: var(--text-h5-size);
     font-weight: var(--font-weight-bold);
     line-height: var(--leading-default);
     letter-spacing: var(--tracking-h5);
   }
+
   .headerSix {
     font-size: var(--text-h6-size);
     font-weight: var(--font-weight-bold);
@@ -102,6 +110,7 @@
     line-height: var(--leading-default);
     letter-spacing: var(--tracking-overline);
   }
+
   .subTitle {
     font-size: var(--text-subTitle-size);
     font-weight: var(--font-weight-bold);
@@ -110,6 +119,7 @@
   }
 }
 
+/* 🌐 Global font */
 body {
   font-family: "Manrope", sans-serif;
 }
